@@ -1,7 +1,9 @@
 package com.allephnogueira.api.controller;
 
 
+import com.allephnogueira.api.medico.DadosCadastroMedicos;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MedicoController {
 
     @PostMapping // Estou dizendo que o tipo de dado que vai ter que chegar tem que ser um POST
-    public void cadastrar() {
-
+    public void cadastrar(@RequestBody DadosCadastroMedicos dados) { // RequestBody quer dizer: Spring pegue os dados do corpo da requisição!
+        System.out.println(dados);
     }
 }

@@ -33,4 +33,5 @@ public record DadosCadastroMedicos(
         @NotNull
                 @Valid // Preciso que ele valide também o DTO que esta dentro do DadosEndereco
         DadosEndereco endereco) {
+
 }

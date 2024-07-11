@@ -21,6 +21,11 @@ public record DadosCadastroMedicos(
         @Pattern(regexp = "\\d{4,6}") // Essa regex é uma expressão regular onde estamos dizendo que é digito + de 4 a 6 digitos
         String crm,
 
+
+        @NotBlank
+                @Pattern(regexp = "\\d{11,13}") // Vai ser um digito e vai ter de 11 a 13 digitos.
+        String telefone,
+
         @NotNull // Aqui nao é uma string então é notnull
                 // O proprio SPRING ja verifica se um dos dados que esta chegando e os dados que estao dentro do enum
         Especialidade especialidade,// Lembra que especialidade vai ser fixo, então vamos criar um enum.

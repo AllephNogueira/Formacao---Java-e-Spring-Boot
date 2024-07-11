@@ -20,6 +20,9 @@ public class Medico {
     private String nome;
     private String email;
     private String crm;
+    private String telefone;
+
+
     @Enumerated (EnumType.STRING)
     private Especialidade especialidade;
     @Embedded // Aqui estamos dizendo para ele ficar em uma classe separada, mas ele vai ficar no mesmo banco de dados, fazendo parte da tabela medicos.
@@ -31,6 +34,7 @@ public class Medico {
         this.nome = dados.nome();
         this.email = dados.email();
         this.crm = dados.crm();
+        this.telefone = dados.telefone();
         this.especialidade = dados.especialidade();
         this.endereco = new Endereco(dados.endereco());
 
